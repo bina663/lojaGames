@@ -12,8 +12,6 @@
 
     class Mensagem{
         private $para = null;
-        private $assunto = null;
-        private $mensagem = null;
 
         public function __get($atrib){
             return $this->$atrib;
@@ -22,7 +20,7 @@
             $this->$atrib = $valor;
         }
         public function mensagemValida(){
-            if(empty($this->para) || empty($this->assunto) || empty($this->mensagem)){
+            if(empty($this->para)){
                 return false;
             }
             return true;
