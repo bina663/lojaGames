@@ -1,0 +1,6 @@
+<?
+    $produto = array(['nome' => 'Dream League Soccer', 'preco' => '5,00', 'descrisao' => 'Dream League Soccer 2016 te dá a liberdade completa para criar a equipe de futebol ideal, de acordo com suas estratégias e objetivos em um campeonato. O jogo conta com seis divisão de torneios, além de sete competições diferentes no estilo “Copa” para ter mais conteúdo em suas partidas.' ,'imagem' => 'dls.jpg', 'quantidade' => 1],
+                    ['nome' => 'Undertale', 'preco' => '15,00', 'descrisao' => 'Undertale é um RPG eletrônico criado pelo desenvolvedor independente norte-americano Toby Fox. No jogo, o jogador pode controlar uma criança humana que caiu em uma caverna, uma região grande e isolada sob a superfície da Terra, separada por uma barreira mágica.' ,'imagem' => 'undertale.jpg','quantidade' => 1],
+                    ['nome' => 'world Conqueror 4', 'preco' => '10,00', 'descrisao' => 'World Conqueror 4 is the newest-released game by EASYTECH in 2017. We will continue to develop and create the best war strategy game.', 'imagem' => 'worldconqueror.jpg','quantidade' => 1])
+
+?>  
