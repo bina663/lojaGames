@@ -22,7 +22,7 @@
             $this->$atrib = $valor;
         }
         public function mensagemValida(){
-            if(empty($this->para) || empty($this->assunto || empty($this->mensagem))){
+            if(empty($this->para) || empty($this->assunto) || empty($this->mensagem)){
                 return false;
             }
             return true;
