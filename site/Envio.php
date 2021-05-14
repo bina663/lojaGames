@@ -69,7 +69,7 @@
         $mail->send();
         header('Location:../index.php?status=true');
     } catch (Exception $e) {
-        header('Location:comprar.php');
+        header('Location:../index.php');
     }
         }
 ?>
