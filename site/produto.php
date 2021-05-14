@@ -29,7 +29,7 @@
             <h2 class="card-title"><?echo $produto[$id]['nome']?></h2>
             <p class="card-text"><?echo $produto[$id]['descrisao']?></p>
             <h4 class="card-text mb-3 text-success">R$<?echo $produto[$id]['preco']?></h4>
-            <a href="Comprar.php?produto=<?echo $id;?>" class="btn btn-success">Comprar</a>
+            <a href="comprar.php?produto=<?echo $id;?>" class="btn btn-success">Comprar</a>
         </div>
     </div>
     </div><!-- container -->
