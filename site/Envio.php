@@ -30,7 +30,7 @@
     $mensagem->__set("para",$_POST['email']);
 
     if(!$mensagem->mensagemValida()){
-        header('location:../site/comprar.php?campo_vazio=true');
+        header('location:../site/Comprar.php?campo_vazio=true');
         die();
     }else{
         
@@ -67,7 +67,7 @@
         $mail->send();
         header('Location:../index.php?status=true');
     } catch (Exception $e) {
-        header('Location:../index.php');
+        header('Location:../index.php?status=false');
     }
         }
 ?>
