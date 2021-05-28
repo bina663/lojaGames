@@ -21,6 +21,10 @@
         <div class="alert alert-success" role="alert">
             Compra bem Sucedida, verifique seu e-mail.
         </div>
+    <?}if(isset($_GET['status']) && $_GET['status'] == 'false'){?>
+        <div class="alert alert-danger" role="alert">
+            Não foi possivel realizar o pedido, porfavor tente mais tarde.
+        </div>
     <?}?>
     <div class="container d-flex justify-content-around card-group mt-5 mb-5">
         <?

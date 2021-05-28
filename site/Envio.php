@@ -68,6 +68,7 @@
         header('Location:../index.php?status=true');
     } catch (Exception $e) {
         header('Location:../index.php?status=false');
+        
     }
         }
 ?>
