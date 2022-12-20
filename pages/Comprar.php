@@ -1,5 +1,5 @@
-<?
-    require_once('acesso.php');
+<?php
+    require_once('../core/acesso.php');
 ?>
 
 <!DOCTYPE html>
@@ -15,29 +15,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,200&display=swap" rel="stylesheet">
     
-    <title>Carrinho Php</title>
+    <title>Loja Games</title>
 </head>
 <body>
-    <?
-    require_once('header.php');
+    <?php
+        require_once('../html/header.php');
     ?>
     <div class="container d-flex justify-content-around card-group mt-5 mb-5">
         <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
         <div class="card-header p-4 h4 text-primary">Você escolheu comprar</div>
             <div class="card-body">
-                <h3 class="card-title"><?echo $produto[$id]['nome'];?></h3>
-                <p class="card-text mt-5 mb-5"><?echo $produto[$id]['descrisao']?></p>
-                <h5 class="card-text">Você ira pagar <strong class='text-success'>R$<?echo $produto[$id]['preco']?></strong></h5>            
+                <h3 class="card-title"><?= $produto[$id]['nome'];?></h3>
+                <p class="card-text mt-5 mb-5"><?= $produto[$id]['descrisao']?></p>
+                <h5 class="card-text">Você ira pagar <strong class='text-success'>R$<?= $produto[$id]['preco']?></strong></h5>            
             </div>
         </div>
 
-        <form method='POST' action='Envio.php?<?$id?>'>
+        <form method='POST' action='../core/envio.php'>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label"><h4 class='display-5'>Seu e-mail</h4></label>
                 <input type="email" class="form-control" id="exampleInputEmail1" name='email' aria-describedby="emailHelp" placeholder='Example@gmail.com'>
-                <? if(isset($_GET['campo_vazio'])){?>
+                <input type="hidden" name="id" value='<?= $id;?>'>
+                <?php if(isset($_GET['campo_vazio'])){?>
                     <div id="emailHelp" class="form-text text-danger mt-2 mb-2">Por favor digite seu E-mail.</div>
-                <?}?>
+                <?php }?>
             </div>
             <button type="submit" class="btn btn-success p-2">Confirmar</button>
         </form>

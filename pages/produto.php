@@ -1,9 +1,7 @@
-<?
-    
-    session_start();
-    print_r($_SESSION);
-    print_r($_GET);
+<?php
+    require_once('../core/acesso.php');
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -17,19 +15,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,200&display=swap" rel="stylesheet">
     
-    <title>Carrinho Php</title>
+    <title>Loja Games</title>
 </head>
 <body>
-    <?
-    require_once('header.php');
+    <?php
+        require_once('../html/header.php');
     ?>
     <div class="container d-flex justify-content-around card-group mt-5 mb-5">
-    <?
-        if(!isset($_SESSION['produto'])){?>
-            <div class="alert alert-danger" role="alert">
-                Carrinho Vazio!
-            </div>
-    <?}?>
+        <div class="card" style="width: 14rem;">
+            <img src="../media/<?= $produto[$id]['imagem']?>" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h2 class="card-title"><?= $produto[$id]['nome']?></h2>
+            <p class="card-text"><?= $produto[$id]['descrisao']?></p>
+            <h4 class="card-text mb-3 text-success">R$<?= $produto[$id]['preco']?></h4>
+            <a href="Comprar.php?produto=<?= $id;?>" class="btn btn-success">Comprar</a>
+        </div>
+    </div>
     </div><!-- container -->
 </body>
 </html>
